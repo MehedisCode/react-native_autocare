@@ -1,0 +1,7 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "noUnusedLocals": false, // Disable checking for unused locals (variables)
+    "noUnusedParameters": false // Disable checking for unused parameters
+  }
+}

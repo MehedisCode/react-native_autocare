@@ -1,0 +1,247 @@
+TODO List: 
+  1. Border on top side on bottom navigation bar
+
+////
+
+import React from 'react';
+import {Button, StyleSheet, Text, View} from 'react-native';
+
+// navigation
+
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../App';
+
+// type DetailsProps = NativeStackScreenProps<RootStackParamList, 'LogInScreen'>;
+
+const LogInScreen = () => {
+  // const {productId} = route.params;
+
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  return (
+    <View style={styles.container}>
+      <Text>This is Log In screen</Text>
+      <Button
+        title="Go to Home"
+        // onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.goBack()}
+      />
+      <Button
+        title="Go back to first scren"
+        // onPress={() => navigation.pop(2)}
+        onPress={() => navigation.popToTop()}
+      />
+    </View>
+  );
+};
+
+export default LogInScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  smallText: {
+    color: '#000000',
+  },
+});
+
+
+/////////////////////////////////////////////////////////
+// Workshop file 
+
+import React from 'react';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+
+// navigation
+
+// import {faMugSaucer} from '@fortawesome/free-solid-svg-icons/faMugSaucer';
+// import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {RootStackParamList} from '../App';
+
+const Workshop = (): JSX.Element => {
+  // const {productId} = route.params;
+
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  function setSearchText(_text: string): void {
+    throw new Error('Function not implemented.');
+  }
+
+  return (
+    <SafeAreaView style={styles.topContainer}>
+      <View style={styles.container}>
+        <ScrollView>
+          <View style={styles.innerContainer}>
+            <View style={styles.textContainer}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginLeft: 10,
+                }}>
+                <Icon
+                  name="map-marker"
+                  size={20}
+                  color="#9E9E9E"
+                  style={{marginRight: 10}}
+                />
+                <Text>Mirpur, Dhaka</Text>
+              </View>
+            </View>
+            <View style={styles.outCardContainer}>
+              <View style={styles.cardContainer}>
+                <Image
+                  source={require('../../images/cards/card1.png')}
+                  style={styles.card1}
+                />
+                <Image
+                  source={require('../../images/cards/card2.png')}
+                  style={styles.card2}
+                />
+              </View>
+              <View style={styles.cardContainer}>
+                <Image
+                  source={require('../../images/cards/card3.png')}
+                  style={styles.card1}
+                />
+                <Image
+                  source={require('../../images/cards/card4.png')}
+                  style={styles.card2}
+                />
+              </View>
+              <View style={styles.cardContainer}>
+                <Image
+                  source={require('../../images/cards/card5.png')}
+                  style={styles.card1}
+                />
+                <Image
+                  source={require('../../images/cards/card6.png')}
+                  style={styles.card2}
+                />
+              </View>
+            </View>
+          </View>
+        </ScrollView>
+
+        {/* Bottom Navbar start  */}
+        <View style={styles.bottomNavigation}>
+          <View style={styles.bottomNavItem}>
+            {/* <Image
+              style={styles.bottomNavIcon}
+              source={require('../../images/icon1.png')}
+            /> */}
+            <TouchableOpacity
+              style={styles.bottomNavItem}
+              onPress={() => navigation.navigate('Home')}>
+              <Icon name="home" size={25} color="#9E9E9E" />
+              <Text style={{}}>Home</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.bottomNavItem}>
+            <View>
+              <MaterialCommunityIcons name="steering" size={24} color="gold" />
+            </View>
+            <Text>Workshop</Text>
+          </View>
+          <View style={styles.bottomNavItem}>
+            {/* <Image
+              style={styles.bottomNavIcon}
+              source={require('../../images/icon3.png')}
+            /> */}
+            {/* <View>
+              <Icon name="folder-open" size={23} color="#9E9E9E" />
+            </View>
+            <Text>Records</Text> */}
+            <TouchableOpacity
+              style={styles.bottomNavItem}
+              onPress={() => navigation.navigate('Records')}>
+              <Icon name="folder-open" size={23} color="#9E9E9E" />
+              <Text style={{}}>Records</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+        {/* //end */}
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default Workshop;
+
+const styles = StyleSheet.create({
+  topContainer: {
+    backgroundColor: 'white',
+    flex: 1,
+  },
+  container: {
+    flex: 1,
+    margin: 20,
+    justifyContent: 'space-between', // Push content to the top
+  },
+  innerContainer: {},
+  carService: {
+    height: 60,
+    justifyContent: 'center',
+    padding: 20,
+    borderRadius: 10,
+    marginTop: 20,
+    borderColor: '#BDBDBD',
+    borderWidth: 1,
+    flexDirection: 'row',
+  },
+  carServiceTxt: {fontSize: 16, color: 'black', flex: 1},
+  carServiceImage: {alignItems: 'flex-end', position: 'relative', bottom: 10},
+  bottomNavigation: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 'auto',
+  },
+  bottomNavItem: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  bottomNavIcon: {
+    width: 24,
+    height: 24,
+    marginBottom: 4,
+  },
+  outCardContainer: {},
+  textContainer: {
+    marginTop: 25,
+  },
+  cardContainer: {
+    flexDirection: 'row',
+  },
+  card1: {
+    height: 200,
+    flex: 1,
+    marginTop: 5,
+    marginBottom: 5,
+    marginRight: 5,
+  },
+  card2: {
+    height: 200,
+    flex: 1,
+    marginTop: 5,
+    marginBottom: 5,
+    marginLeft: 5,
+  },
+});
