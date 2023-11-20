@@ -11,14 +11,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {RootStackParamList} from '../../App';
-// in App.js
-// import {library} from '@fortawesome/fontawesome-svg-core';
-// import {fab} from '@fortawesome/free-brands-svg-icons';
-// import {faSquareCheck} from '@fortawesome/free-solid-svg-icons/faSquareCheck';
 
-// library.add(fab, faSquareCheck, faMugSaucer);
-
-// type DetailsProps = NativeStackScreenProps<RootStackParamList, 'LogInScreen'>;
 const ScheduleScreen = (): JSX.Element => {
   // const {productId} = route.params;
 
@@ -33,7 +26,211 @@ const ScheduleScreen = (): JSX.Element => {
     <SafeAreaView style={styles.topContainer}>
       <View style={styles.container}>
         {/* start from top  */}
+        <View style={{}}>
+          <View style={{marginTop: 5}}>
+            <Text style={{color: 'black', fontWeight: 'bold', fontSize: 18}}>
+              Checkout
+            </Text>
+          </View>
+          <View
+            style={{
+              borderWidth: 1,
+              borderColor: '#C6C6C6',
+              height: 60,
+              justifyContent: 'center',
+              paddingLeft: 20,
+              marginTop: 20,
+              borderRadius: 8,
+            }}>
+            <Text style={{color: 'gold', fontWeight: 'bold', fontSize: 16}}>
+              Add Pick-up Adress
+            </Text>
+          </View>
+          <View style={{marginTop: 30}}>
+            <Text style={{fontSize: 18, color: 'black', fontWeight: 'bold'}}>
+              When do you want the service?
+            </Text>
+          </View>
+          <View>
+            <Text
+              style={{
+                color: 'black',
+                fontWeight: 'bold',
+                fontSize: 15,
+                marginTop: 20,
+              }}>
+              Select Date
+            </Text>
+            <View style={{marginTop: 20, flexDirection: 'row'}}>
+              <View style={styles.dateBox}>
+                <Text style={{fontWeight: 'bold'}}>Today</Text>
+                <Text style={{fontWeight: 'bold'}}>21</Text>
+              </View>
+              <View style={styles.dateBox}>
+                <Text style={{fontWeight: 'bold'}}>Tomorrow</Text>
+                <Text style={{fontWeight: 'bold'}}>22</Text>
+              </View>
+              <View style={styles.dateBox}>
+                <Text style={{fontWeight: 'bold'}}>Wed</Text>
+                <Text style={{fontWeight: 'bold'}}>23</Text>
+              </View>
+              <View style={styles.dateBox}>
+                <Text style={{fontWeight: 'bold'}}>Thu</Text>
+                <Text style={{fontWeight: 'bold'}}>24</Text>
+              </View>
+            </View>
+          </View>
+          <Text
+            style={{
+              marginTop: 25,
+              fontWeight: 'bold',
+              color: 'black',
+              fontSize: 15,
+            }}>
+            Select Pick-up Time Slot
+          </Text>
+          <View style={{flexDirection: 'row', marginTop: 20}}>
+            <View
+              style={{
+                borderColor: '#C6C6C6',
+                borderWidth: 1,
+                height: 50,
+                justifyContent: 'center',
+                paddingLeft: 15,
+                flex: 1,
+                marginRight: 10,
+                borderRadius: 8,
+              }}>
+              <Text style={{fontWeight: 'bold'}}>8:00 - 8:30am</Text>
+            </View>
+            <View
+              style={{
+                marginLeft: 10,
+                borderRadius: 8,
+                borderColor: '#C6C6C6',
+                borderWidth: 1,
+                height: 50,
+                justifyContent: 'center',
+                paddingLeft: 15,
+                flex: 1,
+              }}>
+              <Text style={{fontWeight: 'bold'}}>8:30 - 9:00am</Text>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', marginTop: 20}}>
+            <View
+              style={{
+                borderColor: '#C6C6C6',
+                borderWidth: 1,
+                height: 50,
+                justifyContent: 'center',
+                paddingLeft: 15,
+                flex: 1,
+                marginRight: 10,
+                borderRadius: 8,
+              }}>
+              <Text style={{fontWeight: 'bold'}}>9:00 - 9:30am</Text>
+            </View>
+            <View
+              style={{
+                marginLeft: 10,
+                borderRadius: 8,
+                borderColor: '#C6C6C6',
+                borderWidth: 1,
+                height: 50,
+                justifyContent: 'center',
+                paddingLeft: 15,
+                flex: 1,
+              }}>
+              <Text style={{fontWeight: 'bold'}}>9:30 - 10:00am</Text>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', marginTop: 20}}>
+            <View
+              style={{
+                borderColor: '#C6C6C6',
+                borderWidth: 1,
+                height: 50,
+                justifyContent: 'center',
+                paddingLeft: 15,
+                flex: 1,
+                marginRight: 10,
+                borderRadius: 8,
+              }}>
+              <Text style={{fontWeight: 'bold'}}>10:00 - 10:30am</Text>
+            </View>
+            <View
+              style={{
+                marginLeft: 10,
+                borderRadius: 8,
+                borderColor: '#C6C6C6',
+                borderWidth: 1,
+                height: 50,
+                justifyContent: 'center',
+                paddingLeft: 15,
+                flex: 1,
+              }}>
+              <Text style={{fontWeight: 'bold'}}>10:30 - 11:00am</Text>
+            </View>
+          </View>
+          <View style={{flexDirection: 'row', marginTop: 20}}>
+            <View
+              style={{
+                borderColor: '#C6C6C6',
+                borderWidth: 1,
+                height: 50,
+                justifyContent: 'center',
+                paddingLeft: 15,
+                flex: 1,
+                marginRight: 10,
+                borderRadius: 8,
+              }}>
+              <Text style={{fontWeight: 'bold'}}>11:00 - 11:30am</Text>
+            </View>
+            <View
+              style={{
+                marginLeft: 10,
+                borderRadius: 8,
+                borderColor: '#C6C6C6',
+                borderWidth: 1,
+                height: 50,
+                justifyContent: 'center',
+                paddingLeft: 15,
+                flex: 1,
+              }}>
+              <Text style={{fontWeight: 'bold'}}>11:30 - 12:00am</Text>
+            </View>
+          </View>
 
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              marginTop: 'auto',
+              padding: 5,
+              top: 50,
+              borderRadius: 5,
+              borderColor: '#C6C6C6',
+            }}>
+            <View style={{flex: 1}}>
+              <Text style={{color: 'black'}}>Basic Charge</Text>
+              <Text style={{color: 'black'}}>Tk. 500</Text>
+            </View>
+            <TouchableOpacity
+              style={{
+                justifyContent: 'center',
+                backgroundColor: 'gold',
+                flex: 0.4,
+                borderRadius: 5,
+                alignItems: 'center',
+              }}
+              onPress={() => {
+                navigation.navigate('SuccessPage');
+              }}>
+              <Text style={{color: 'white', fontWeight: 'bold'}}>PROCEED</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
         {/* start  */}
         <View style={styles.bottomNavigation}>
           <View style={styles.bottomNavItem}>
@@ -107,7 +304,6 @@ const styles = StyleSheet.create({
     width: '49%',
     alignItems: 'flex-end',
   },
-
   searchBox: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -159,5 +355,15 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     marginBottom: 4,
+  },
+  dateBox: {
+    borderWidth: 1,
+    borderColor: '#C6C6C6',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 15,
+    height: 70,
+    width: 75,
+    borderRadius: 8,
   },
 });

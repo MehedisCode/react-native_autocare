@@ -9,6 +9,7 @@ import Home from './screens/Home';
 import LogInScreen from './screens/LogInScreen';
 import Records from './screens/Records';
 import ScheduleScreen from './screens/ServiceBooking/ScheduleScreen';
+import SuccessPage from './screens/ServiceBooking/SuccessPage';
 import SignUpScreen from './screens/SignUpScreen';
 import SplashScreen from './screens/SplashScreen';
 import Workshop from './screens/WorkShop';
@@ -21,6 +22,7 @@ export type RootStackParamList = {
   WorkShop: undefined;
   Records: undefined;
   ScheduleScreen: undefined;
+  SuccessPage: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -40,6 +42,7 @@ function App(): JSX.Element {
         <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
         <Stack.Screen name="Records" component={Records} />
         <Stack.Screen name="ScheduleScreen" component={ScheduleScreen} />
+        <Stack.Screen name="SuccessPage" component={SuccessPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

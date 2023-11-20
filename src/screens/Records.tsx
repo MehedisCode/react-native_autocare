@@ -19,7 +19,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {RootStackParamList} from '../App';
 // pdf download
-const supportedURL = 'https://filetransfer.io/data-package/jU50CqiJ/download';
+const supportedURL = 'https://filetransfer.io/data-package/jlPmblVi/download';
 
 const Records = (): JSX.Element => {
   // const {productId} = route.params;
